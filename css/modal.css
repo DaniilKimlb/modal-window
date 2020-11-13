@@ -1,0 +1,95 @@
+.vmodal {}
+
+.vmodal.open .modal-overley,
+.vmodal.open .modal-window {
+    opacity: 1;
+    z-index: 1000;
+    /* animation: 3s ease-in 1s infinite reverse both running slidein; */
+}
+
+.vmodal.hide .modal-overley,
+.vmodal.hide .modal-window {
+    opacity: 1;
+    z-index: 1000;
+    /* animation: 3s ease-in 1s infinite reverse both running slidein; */
+}
+
+.modal-window,
+.modal-overley {
+    opacity: 0;
+    z-index: -1;
+}
+
+.vmodal.open .modal-overley {
+    /* transform: translateY(100px); */
+    background: rgb(0, 0, 0, .5);
+}
+
+.vmodal.hide .modal-overley {
+    /* transform: translateY(100px); */
+    background: rgb(0, 0, 0, 0);
+}
+
+.vmodal.open .modal-window {
+    transform: translateY(100px);
+}
+
+.vmodal.hide .modal-window {
+    transform: translateY(-200px);
+}
+
+.modal-overley {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, .5);
+    transition: background 0.5s ease-in;
+}
+
+.modal-window {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0px auto;
+    transform: translateY(-200px);
+    transition: transform .2s ease-in;
+}
+
+
+.modal-header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+
+.modal-close {
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: red;
+}
+
+.modal-body {
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+
+.modal-body p {
+    margin: 0 0 5px;
+}
+
+.model-footer {
+    padding: 5px 10px;
+    border-top: 1px solid #dddddd;
+
+}
